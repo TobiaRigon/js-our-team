@@ -1,3 +1,6 @@
+
+const teamDiv = document.getElementById("team_div");
+
 // Creare l’array di oggetti con le informazioni fornite.
 let team = [
   {
@@ -40,4 +43,13 @@ for (let i = 0; i < team.length; i++) {
   console.log("Immagine: " + team[i].immagine);
   // riga vuota
   console.log("\n");
-}
+};
+
+// Stampare le stesse informazioni su DOM sotto forma di stringhe
+for (let i = 0; i < team.length; i++) {
+  teamDiv.innerHTML += ("Nome: " + team[i].nome + "</br>");
+  teamDiv.innerHTML += ("Ruolo: " + team[i].ruolo + "</br>");
+  teamDiv.innerHTML += ("Immagine: " + team[i].immagine + "</br>");
+  // riga vuota
+  teamDiv.innerHTML += ("</br>");
+};
